@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>King's Letter</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+  body {
+    font-family: 'Great Vibes', cursive; 
+    background-color: #fdf1e0;
+    padding: 50px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('parchment_texture.png'); 
+  }
+  
+  .letter {
+    width: 600px;
+    background-color: rgba(255, 255, 255, 0.8); 
+    border: 10px solid #a27e46;
+    padding: 40px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+  }
+  
+  .letter:hover {
+    transform: scale(1.05); 
+  }
+  
+  .salutation {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+  .content {
+    font-size: 20px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+  }
+  
+  .signature {
+    text-align: right;
+    margin-top: 50px;
+    font-size: 24px;
+  }
+</style>
+</head>
+<body>
+<div class="letter">
+  <div class="salutation">To Esteemed Monika,</div>
+  <div class="content">
+    <p>Dear Monika,</p>
+    <p>Happy Birthday 🥳🎉</p>
+    <p>Today is a day to celebrate you, a wonderful person who has brought so much joy and warmth into the lives of those around you.</p>
+    <p>May your birthday be filled with the happiness you give to others every day. Here’s to you—may your heart be as full as your life has made ours.You might expected this kind of gift or not. I hope this can be a way to express my appreciation and gratitude to have you in our family. </p>
+    <p>With the utmost respect and admiration,</p>
+  </div>
+  <div class="signature">Murtaza</div>
+</div>
+
+<script>
+window.onload = function() {
+  const letter = document.querySelector('.letter');
+  letter.addEventListener('click', function() {
+    const seal = document.createElement('img');
+    seal.setAttribute('src', 'royal_seal.png');
+    seal.style.position = 'absolute';
+    seal.style.bottom = '20px';
+    seal.style.right = '20px';
+    seal.style.width = '100px';
+    if (!document.querySelector('img')) { 
+      this.appendChild(seal);
+    }
+  });
+};
+</script>
+</body>
+</html>
